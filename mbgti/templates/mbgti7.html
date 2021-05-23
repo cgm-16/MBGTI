@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>MBGTI</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link href="/static/mbgti.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="question">
+            <img src="/static/bg/bg.jpg" id="bg" alt="" sizes="" srcset="">
+            <img src="/static/bg/mbgti7.png" id="bgframe" alt="" sizes="" srcset="">
+            <div id="qbox">
+                <div class="btn btn-light" onclick="choose(1)" style="margin-bottom: 3%;">
+                    <div class="bigletter">A</div>
+                    <div class="smletter">
+                        인생은 실전ㅇㅇ 쟤를 살리는 게 이득인지 빠르게 따져본다
+                    </div>
+                </div>
+                <div class="btn btn-light" onclick="choose(2)">
+                    <div class="bigletter">B</div>
+                    <div class="smletter">
+                        의리에 죽고 의리에 사는 나! 일단 몸이 반응한다
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function choose(ans) {
+                var results = location.href;
+                var lstResults = Array(results.split("?")[1])
+                lstResults.push("q7="+ans);
+                console.log(lstResults);
+                strResults = lstResults.join("&")
+                location.href = "./mbgti8.html?" + strResults;
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>

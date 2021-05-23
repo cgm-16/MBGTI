@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>MBGTI</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <style>
+            html { 
+                font-size: 62.5%;
+            }
+
+            #start {
+                position: absolute;
+                left: 10vw;
+                width: 80vw;
+                margin-right: 10vw;
+                height: 100vmax;
+                z-index: 1;
+            }
+
+            #startbtn {
+                position: absolute;
+                top: 75vmax;
+                margin-left: 30%;
+                width: 40%;
+                margin-right: 30%;
+                z-index: 100;
+                font-size: 3.2rem;
+                background-color: rgb(237, 133, 13);
+                border: 5px outset rgb(237, 133, 13);
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px 5px rgba(255, 112, 0, 0.60);
+                text-align: center;
+            }
+
+            @media all and (max-width: 720px) {
+                html {
+                    font-size: 50%;
+                }
+
+                #start {
+                    position: absolute;
+                    left: 0%;
+                    width: 100vw;
+                    height: 100vmax;
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <img id="start" src="/static/bg/start.jpg" alt="">
+
+        <button id="startbtn" class="btn btn-warning btn-lg text-light py-3 px-5 text-nowrap">시작하기</button>
+        
+        <script>
+            document.getElementById("startbtn").onclick = function() {
+                location.href = "./mbgti.html"
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>
