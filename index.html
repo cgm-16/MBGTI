@@ -19,6 +19,7 @@
             <div id="question">
                 <img src="./bg/bg.jpg" id="bg" alt="" sizes="" srcset="">
                 <img src="" id="bgframe" alt="" sizes="" srcset="">
+                <div id="probbox">상대방은 나를 보지 <br> 못했고, 나만 상대방을<br>포착한 상황</div>
                 <div id="qbox">
                     <div class="btn btn-light" onclick="choose(1)" style="margin-bottom: 3%;">
                         <div class="bigletter">A</div>
@@ -51,6 +52,16 @@
                             , "./bg/mbgti5.png", "./bg/mbgti6.png"
                             , "./bg/mbgti7.png", "./bg/mbgti8.png"
                             , "./bg/mbgti9.png"
+                        ];
+
+            var prob = ["비행기에서 떨어질 때?", "근처에 보급품이<br>떨어지면?"
+                        , "상대방은 나를 보지<br>못했고, 나만 상대방을<br>포착한 상황!!"
+                        , "내 팀원이<br>위험한 위치에 있는 것을<br>봤을 때 나는?"
+                        , "우리 팀이<br>교전을 준비할 때,<br>나는?"
+                        , "둘 중 하나를<br>무조건 버려야 할 때<br>내가 먼저 버릴 것은?"
+                        , "기절한 팀원이 '헬프!'를<br>외치면 나는?"
+                        , "치킨을 아쉽게 놓쳤을때?"
+                        , "이번 판<br>막판하려고 했는데,<br>허무하게 죽었다면?"
                         ];
 
             var quizAB = [
@@ -86,6 +97,7 @@
 
             function nextQue(n) {
                 document.getElementById("bgframe").src = quizUrls[n];
+                document.getElementById("probbox").innerHTML = prob[n];
                 document.getElementById("A").innerText = quizAB[n]["A"];
                 document.getElementById("B").innerText = quizAB[n]["B"];
             }
