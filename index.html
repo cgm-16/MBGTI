@@ -72,13 +72,7 @@
             }
 
             function choose(ans) {
-                if (n <= 7) {
-                    nextQue(n)
-                    lstResults.push(`q${n}=${ans},`);
-                    n++;
-                    console.log(lstResults);
-                    console.log(n);
-                } else if (n == 8) {
+                if (n <= 8) {
                     nextQue(n)
                     lstResults.push(`q${n}=${ans}`);
                     n++;
@@ -98,7 +92,7 @@
             function showResults() {
                 $("#mbgti").hide();
                 $("#result").show();
-                lstAnswers = lstResults[1].split(",").map(n => n[3]);
+                var lstAnswers = lstResults.map(n => n[3]);
                 
                 var imgUrl = getGun(lstAnswers);
                 document.getElementById("results").innerHTML += `<img id="resultimg" src="${imgUrl}">`;
