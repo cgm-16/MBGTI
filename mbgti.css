@@ -34,7 +34,7 @@ html {
 #startbtn {
     position: absolute;
     top: 75vh;
-    margin-left: calc(50% - 70px);
+    margin-left: calc(50% - 60px);
     width: fit-content;
     height: fit-content;
     z-index: 100;
@@ -140,12 +140,25 @@ html {
 
 #sharebox {
     position: absolute;
-    display: flex;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-rows: 50% 50%;
     top: 80%;
     height: 5%;
     width: 80%;
     left: 10%;
-    background-color: aliceblue;
+}
+
+#sharebox div {
+    display: flex;
+    justify-content: center;
+}
+
+#sharebox div img {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 5%;
+    cursor: pointer;
 }
 
 #redo {
@@ -159,7 +172,7 @@ html {
 #redobtn {
     grid-column: 2;
     font-family: 'GmarketBold', 'Courier New', Courier, monospace;
-    font-size: 6.4rem;
+    font-size: 6rem;
     border-radius: 10px;
 }
 
@@ -213,6 +226,10 @@ html {
 
     #resultimg {
         object-fit: cover;
+    }
+
+    #redobtn {
+        font-size: 3.6rem;
     }
 }
 
