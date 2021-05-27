@@ -118,20 +118,49 @@ html {
 
 /*result.html*/
 #result {
+    position: relative;
     width: fit-content;
     height: fit-content;
 }
 
 #results {
+    position: relative;
+    display: block;
     width: fit-content;
     height: fit-content;
 }
 
 #resultimg {
-    position: absolute;
+    /* position: absolute; */
+    display: block;
     width: 100vw;
     height: auto;
+    z-index: 1;
+}
 
+#sharebox {
+    position: absolute;
+    display: flex;
+    top: 80%;
+    height: 5%;
+    width: 80%;
+    left: 10%;
+    background-color: aliceblue;
+}
+
+#redo {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    position: absolute;
+    width: 100vw;
+    top: 89%;
+}
+
+#redobtn {
+    grid-column: 2;
+    font-family: 'GmarketBold', 'Courier New', Courier, monospace;
+    font-size: 6.4rem;
+    border-radius: 10px;
 }
 
 @media all and (max-width: 768px){
