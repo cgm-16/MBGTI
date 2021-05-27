@@ -119,6 +119,11 @@ html {
 }
 
 /*result.html*/
+#result {
+    width: fit-content;
+    height: fit-content;
+}
+
 #results {
     width: fit-content;
     margin-left: auto;

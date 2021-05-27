@@ -22,8 +22,8 @@
         <article id="mbgti" style="display: none;">
             <div id="question">
                 <img src="./bg/bg.jpg" id="bg" alt="" sizes="" srcset="">
-                <img src="" id="bgframe" alt="" sizes="" srcset="">
-                <div id="probbox">상대방은 나를 보지 <br> 못했고, 나만 상대방을<br>포착한 상황</div>
+                <img src="#" id="bgframe" alt="" sizes="" srcset="">
+                <div id="probbox"></div>
                 <div id="qbox">
                     <div class="btn btn-light" onclick="choose(1)" style="margin-bottom: 3%;">
                         <div class="bigletter">A</div>
@@ -38,7 +38,9 @@
         </article>
         
         <article id="result" style="display: none;">
-            <div id="results"></div>
+            <div id="results">
+                <img id="resultimg" src="#">
+            </div>
         </article>
         
         <script>
@@ -78,7 +80,7 @@
                         , {A: "인생은 실전ㅇㅇ 쟤를 살리는 게 이득인지 빠르게 따져본다", B: "의리에 죽고 의리에 사는 나! 일단 몸이 반응한다"}
                         , {A: "나 왜 졌지? 그때 그렇게 했어야했나? 머리속으로 시뮬레이션 백만번 돌림", B: "머선129...3초간 멍때리고 바로 다음판 돌림"}
                         , {A: "막판으로 맘 정했으면 그대로 끝내야지~(끈다)", B: "아,, 담판 무조건 치킨먹을 각인데,, 한판 더 기?"}
-                        ]
+                        ];
                     
             function startQuiz() {
                 $("#startPg").hide();
@@ -107,16 +109,14 @@
             }
 
             function showResults() {
+                var lstAnswers = lstResults.map(n => n[3]);
+                var imgUrl = getGun(lstAnswers);
+                document.getElementById("resultimg").src = imgUrl;
                 $("#mbgti").hide();
                 $("#result").show();
-                var lstAnswers = lstResults.map(n => n[3]);
-                
-                var imgUrl = getGun(lstAnswers);
-                document.getElementById("results").innerHTML += `<img id="resultimg" src="${imgUrl}">`;
             }
 
             function getGun(lst) {
-                var text = "";
                 var j = 0;
                 var ch = 0;
                 var c = 0;
