@@ -46,6 +46,8 @@ html {
     cursor: pointer;
     text-align: center;
     font-family: 'GmarketBold';
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
 }
 
 /*mbgti.html*/
@@ -182,5 +184,12 @@ html {
 
     #resultimg {
         object-fit: cover;
+    }
+}
+
+@media all and (max-width: 375px){
+    /*공통*/
+    html {
+        font-size: 35%;
     }
 }
