@@ -1,6 +1,8 @@
 /*공통*/
 @viewport {
-    width: fit-content; user-zoom: fixed;
+    width: 100vw;
+    height: 100vh;
+    user-zoom: fixed;
 }
 
 @font-face {
