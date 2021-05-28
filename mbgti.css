@@ -157,6 +157,7 @@ html {
 #sharebox div img {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    -webkit-appearance: none;
     margin: 5%;
     cursor: pointer;
 }
