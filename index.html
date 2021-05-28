@@ -58,6 +58,19 @@
         <article id="result" style="display: none;">
             <div id="results">
                 <img id="resultimg" src="#">
+
+                <div id="playerbtnpoz">
+                    <a id="playerbtn" class="btn" href="#" target="_blank">
+                        선수 영상 보러 가기
+                    </a>
+                </div>
+
+                <div id="pmpsbtnpoz">
+                    <a id="pmpsbtn" class="btn" href="https://youtu.be/9IdUFmko0pY" target="_blank">
+                        시청하러 가기
+                    </a>
+                </div>
+
                 <div id="sharebox">
                     <!-- Kakao API -->
                     <div id="kko" onclick="sendLink()">
@@ -141,6 +154,13 @@
                 , {A: "막판으로 맘 정했으면 그대로 끝내야지~(끈다)", B: "아,, 담판 무조건 치킨먹을 각인데,, 한판 더 기?"}
             ];
 
+            var vidUrl = [
+                "https://youtu.be/SxxbptHm_I0?t=11741", "https://youtu.be/UvkbcAg-HmU?t=11069"
+                , "https://youtu.be/SxxbptHm_I0?t=5262" ,"https://youtu.be/UvkbcAg-HmU?t=3143"
+                , "https://youtu.be/SxxbptHm_I0?t=1012" , "https://youtu.be/SxxbptHm_I0?t=1243"
+                , "https://youtu.be/UvkbcAg-HmU?t=10647" , "https://youtu.be/B83dvSRcWWc?t=7896"
+            ];
+
             // 이하 공유 버튼
             var url_default_ks = "https://story.kakao.com/share?url=";
             var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
@@ -216,6 +236,11 @@
                 
                 if (j >= 2) {
                     isYp = true;
+                    document.getElementById("playerbtn").style.backgroundColor = "#94C9CD";
+                    document.getElementById("pmpsbtn").style.backgroundColor = "#94C9CD";
+                } else {
+                    document.getElementById("playerbtn").style.backgroundColor = "#FE8D06";
+                    document.getElementById("pmpsbtn").style.backgroundColor = "#FE8D06";
                 }
 
                 if (ch >= 2) {
@@ -227,20 +252,28 @@
                 }
 
                 if (!isYp && isCharge && isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[0];
                     return gunUrls[0];
                 } else if (!isYp && isCharge && !isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[1];
                     return gunUrls[1];
                 } else if (!isYp && !isCharge && isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[2];
                     return gunUrls[2];
                 } else if (!isYp && !isCharge && !isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[3];
                     return gunUrls[3];
                 } else if (isYp && isCharge && isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[4];
                     return gunUrls[4];
                 } else if (isYp && isCharge && !isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[5];
                     return gunUrls[5];
                 } else if (isYp && !isCharge && isCool) {
+                    document.getElementById("playerbtn").href = vidUrl[6];
                     return gunUrls[6];
                 } else {
+                    document.getElementById("playerbtn").href = vidUrl[7];
                     return gunUrls[7];
                 }
             }
@@ -259,7 +292,7 @@
 
             function sendLink() {
                 Kakao.Link.sendScrap({
-                    requestUrl: 'https://pmps-luv-mbgti.netlify.app',
+                    requestUrl: 'https://pmps-luv-mbgti.netlify.app'
                 });
             }
         </script>
