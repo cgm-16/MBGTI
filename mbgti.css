@@ -141,7 +141,7 @@ html {
 #sharebox {
     position: absolute;
     display: grid;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 30% 40% 30%;
     grid-template-rows: 50% 50%;
     top: 80%;
     height: 5%;
@@ -152,12 +152,10 @@ html {
 #sharebox div {
     display: flex;
     justify-content: center;
+
 }
 
-#sharebox div img {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-appearance: none;
+.linkbtn {
     margin: 5%;
     cursor: pointer;
 }
@@ -238,12 +236,5 @@ html {
     /*공통*/
     html {
         font-size: 35%;
-    }
-}
-
-@supports (-webkit-appearance:none) and (word-break:keep-all) and (not (-ms-accelerator:true)) {
-    #sharebox div {
-        display: flex;
-        justify-content: center;
     }
 }
