@@ -60,7 +60,7 @@
                 <img id="resultimg" src="#">
                 <div id="sharebox">
                     <!-- Kakao API -->
-                    <div onclick="sendLink()">
+                    <div id="kko" onclick="sendLink()">
                         <img
                             class="linkbtn"
                             src="./sharebtn/kko.png"
@@ -68,27 +68,27 @@
                     </div>
 
                     <!-- Facebook share button --> 
-                    <div onclick="share(url_combine_fb, 'scrollbars=no, width=600, height=600');">
+                    <div id="fb" onclick="share(url_combine_fb, 'scrollbars=no, width=600, height=600');">
                         <img class="linkbtn" src="./sharebtn/fb.png" alt="페이스북으로 공유하기">
                     </div> 
                     
                     <!-- Twitter share button --> 
-                    <div onclick="share(url_combine_tw, 'scrollbars=no, width=600, height=600');">
+                    <div id="twt" onclick="share(url_combine_tw, 'scrollbars=no, width=600, height=600');">
                         <img class="linkbtn" src="./sharebtn/twt.png" alt="트위터로 공유하기">
                     </div> 
                     
                     <!-- Naver share button --> 
-                    <div onclick="share(url_combine_naver);">
+                    <div id="nv" onclick="share(url_combine_naver);">
                         <img class="linkbtn" src="./sharebtn/nv.png" alt="네이버로 공유하기">
                     </div>  
 
                     <!-- Kakaostory share button -->
-                    <div onclick="share(url_combine_ks, 'scrollbars=no, width=600, height=600');">
+                    <div id="ks" onclick="share(url_combine_ks, 'scrollbars=no, width=600, height=600');">
                         <img class="linkbtn" src="./sharebtn/ks.png" alt="카카오스토리로 공유하기">
                     </div>
                     
                     <!-- Link copy button -->
-                    <div onclick="copylink()">
+                    <div id="lk" onclick="copylink()">
                         <img class="linkbtn" src="./sharebtn/link.png" alt="복사하기">
                     </div>
                 </div>

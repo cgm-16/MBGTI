@@ -138,26 +138,66 @@ html {
     z-index: 1;
 }
 
-#sharebox {
+#kko {
     position: absolute;
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 50% 50%;
     top: 80%;
-    height: 5%;
-    width: 80%;
+    height: 2%;
     left: 10%;
+    width: 25%;
+    z-index: 100;
 }
 
-#sharebox div {
-    display: flex;
-    justify-content: center;
+#fb {
+    position: absolute;
+    top: 80%;
+    height: 2%;
+    left: 40%;
+    width: 25%;
+    z-index: 100;
+}
 
+#twt {
+    position: absolute;
+    top: 80%;
+    height: 2%;
+    left: 70%;
+    width: 25%;
+    z-index: 100;
+}
+
+#nv {
+    position: absolute;
+    top: 83%;
+    height: 2%;
+    left: 10%;
+    width: 25%;
+    z-index: 100;
+}
+
+#ks {
+    position: absolute;
+    top: 83%;
+    height: 2%;
+    left: 40%;
+    width: 25%;
+    z-index: 100;
+}
+
+#lk {
+    position: absolute;
+    top: 83%;
+    height: 2%;
+    left: 70%;
+    width: 25%;
+    z-index: 100;
 }
 
 .linkbtn {
-    margin: 5%;
+    width: auto;
+    height: 100%;
     cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #redo {
