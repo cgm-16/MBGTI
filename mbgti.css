@@ -242,10 +242,8 @@ html {
 }
 
 @supports (-webkit-appearance:none) and (word-break:keep-all) and (not (-ms-accelerator:true)) {
-    #sharebox div img {
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        margin: 5%;
-        cursor: pointer;
+    #sharebox div {
+        display: flex;
+        justify-content: center;
     }
 }
