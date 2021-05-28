@@ -4,12 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimal-ui, viewport-fit=cover, user-scalable=no">
-        <meta property="fb:app_id" content="1912167082292549">
+        
         <meta property="og:description" content="2021 PMPS - MGBTI">
         <meta property="og:title" content="모바일 배그 플레이 성향 테스트 MBGTI">
         <meta property="og:url" content="https://pmps-luv-mbgti.netlify.app/">
         <meta name="description" content="모바일 배그 플레이성향 테스트 MBGTI 테스트하고 PMPS 보러가자!">
+        <meta property="fb:app_id" content="1912167082292549" />
+
         <title>MBGTI</title>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="./mbgti.css" rel="stylesheet">
         <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
@@ -73,22 +76,22 @@
                     </script>
 
                     <!-- Facebook share button --> 
-                    <div onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
+                    <div onclick="share(url_combine_fb, 'scrollbars=no, width=600, height=600');">
                         <img src="https://imgur.com/2pxqHxt.png" alt="페이스북으로 공유하기">
                     </div> 
                     
                     <!-- Twitter share button --> 
-                    <div onclick="window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600'); return false;">
+                    <div onclick="share(url_combine_tw, 'scrollbars=no, width=600, height=600');">
                         <img src="https://imgur.com/z7V4qga.png" alt="트위터로 공유하기">
                     </div> 
                     
                     <!-- Naver share button --> 
-                    <div onclick="window.open(url_combine_naver); return false;">
+                    <div onclick="share(url_combine_naver);">
                         <img src="https://imgur.com/AYqtESo.png" alt="네이버로 공유하기">
                     </div>  
 
                     <!-- Kakaostory share button -->
-                    <div onclick="window.open(url_combine_ks, '', 'scrollbars=no, width=600, height=600'); return false;">
+                    <div onclick="share(url_combine_ks, 'scrollbars=no, width=600, height=600');">
                         <img src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/34567f85017800001.png" alt="카카오스토리로 공유하기">
                     </div>
                     
@@ -96,8 +99,8 @@
                     <div onclick="copylink()">
                         <img src="./link.png" alt="복사하기">
                     </div>
-
                 </div>
+
                 <div id="redo">
                     <button id="redobtn" class="btn btn-light btn-lg px-5 py-3" onclick="location.reload()">테스트 다시 하기</button>
                 </div>
@@ -146,18 +149,18 @@
                 , {A: "막판으로 맘 정했으면 그대로 끝내야지~(끈다)", B: "아,, 담판 무조건 치킨먹을 각인데,, 한판 더 기?"}
             ];
 
+            // 이하 공유 버튼
             var url_default_ks = "https://story.kakao.com/share?url=";
             var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
             var url_default_tw_txt = "https://twitter.com/intent/tweet?text="; 
             var url_default_tw_url = "&url="; 
-            var url_default_naver = "http://share.naver.com/web/shareView.nhn?url="; 
             var title_default_naver = "&title="; 
             var url_this_page = location.href; 
-            var title_this_page = document.title; 
+            var title_this_page = document.title;
             var url_combine_ks = url_default_ks + url_this_page; 
-            var url_combine_fb = url_default_fb + url_this_page; 
-            var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page; 
-            var url_combine_naver = "https://cafe.naver.com/ca-fe/cafes/29359582/menus/134/articles/write?boardType=L"
+            var url_combine_fb = url_default_fb + url_this_page;
+            var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page;
+            var url_combine_naver = "https://cafe.naver.com/ca-fe/cafes/29359582/menus/134/articles/write?boardType=L";
 
             Kakao.init("32a2b2467144d8c6d140e168c067afc8");
 
@@ -252,6 +255,14 @@
 
             function copylink() {
                 navigator.clipboard.writeText("https://pmps-luv-mbgti.netlify.app/")
+            }
+
+            function share(strUrl, strOptions) {
+                if ( typeof window.open === "function") {
+                    return window.open(strUrl, "_blank", strOptions);
+                } else {
+                    return location.href = strUrl;
+                }
             }
         </script>
 
